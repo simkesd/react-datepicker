@@ -361,6 +361,9 @@ export default class DatePicker extends React.Component {
     if (this.props.withPortal) {
       event.preventDefault();
     }
+    if(this.props.onClickOutsideCallback) {
+      this.props.onClickOutsideCallback();
+    }
   };
 
   handleChange = (...allArgs) => {
